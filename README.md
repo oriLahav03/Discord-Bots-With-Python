@@ -11,7 +11,7 @@
 2. CommandsExamples.
     - There is some code examples you can use.
     - Notification when bot online => on_ready().
-    - Tag user (spam) only spespecific roles have access => tag(ctx, user: discord.Member).
+    - Tag user (spam) only specific roles have access => tag(ctx, user: discord.Member).
     - Send member a private message with given content => dm(ctx, member: discord.Member = None, *, message).
     - Spam user in private message => spam(ctx, member: discord.Member = None, *, message).
     - Delete given amount of messages => clear(ctx, amount=1).
