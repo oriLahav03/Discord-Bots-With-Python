@@ -32,4 +32,4 @@ async def on_message(message):
         await channel.send(int(message.content) + 1)
 
 
-client.run('<TOken>')  # enter your bot token here
+client.run('<Token>')  # enter your bot token here
