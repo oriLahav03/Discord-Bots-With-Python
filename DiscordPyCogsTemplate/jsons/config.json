@@ -1,0 +1,4 @@
+{
+    "token": "Bot-Token-Here",
+    "cogs": ["cogs.error_handler", "cogs.commands", "cogs.events"]
+}
