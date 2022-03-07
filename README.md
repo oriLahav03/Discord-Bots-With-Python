@@ -19,3 +19,5 @@
     - This bot use for counter rooms, when user send message its will check if its a valid number in the raw of the previous numbers and send the nex number.
     - Notification when bot online => on_ready().
     - Handle every message sent => on_message(message).
+4. DiscordPyCogsTemplate.
+    - This is a template for discord.py bot that using Cogs
