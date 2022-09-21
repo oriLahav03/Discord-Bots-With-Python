@@ -8,12 +8,6 @@ class Events(commands.Cog):
         """Events cog class, here is all the events declarations."""
         self.bot = bot
 
-    @commands.Cog.listener()
-    async def on_ready(self) -> None:
-        self.bot.log(f'Logged in as: {self.bot.user}')
-        self.bot.remove_command('help')
-        await asyncio.sleep(3)
 
-
-def setup(bot) -> None:
-    bot.add_cog(Events(bot))
+async def setup(bot) -> None:
+    await bot.add_cog(Events(bot))

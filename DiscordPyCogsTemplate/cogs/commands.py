@@ -1,4 +1,6 @@
+import discord
 from discord.ext import commands
+from discord import app_commands
 
 
 class Commands(commands.Cog):
@@ -6,10 +8,10 @@ class Commands(commands.Cog):
         """All the fun commands are contained in this Fun cog class."""
         self.bot = bot
 
-    @commands.command()
-    async def ping(self, ctx: commands.context.Context):
-        await ctx.send(f'Pong! {round(self.bot.latency * 1000)}ms')
+    @app_commands.command()
+    async def ping(self, interaction: discord.Interaction):
+        await interaction.response.send_message(f'Pong! {round(self.bot.latency * 1000)}ms')
 
 
-def setup(bot) -> None:
-    bot.add_cog(Commands(bot))
+async def setup(bot) -> None:
+    await bot.add_cog(Commands(bot))

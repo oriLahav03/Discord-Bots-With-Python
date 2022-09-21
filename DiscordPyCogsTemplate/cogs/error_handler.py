@@ -2,7 +2,7 @@ from discord.ext import commands
 import discord
 
 
-class Events(commands.Cog):
+class Error_Handler(commands.Cog):
 
     def __init__(self, bot) -> None:
         """Events cog class, here is all the events declarations."""
@@ -33,5 +33,5 @@ class Events(commands.Cog):
             await ctx.send(embed=discord.Embed(description=f'Error occurred. {error}.'))
 
 
-def setup(bot) -> None:
-    bot.add_cog(Events(bot))
+async def setup(bot) -> None:
+    await bot.add_cog(Error_Handler(bot))
